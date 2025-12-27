@@ -1,0 +1,19 @@
+#spring.application.name=big-event
+#
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/big_event
+    username: root
+    password: 111111
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true # 开启驼峰命名转换，例如数据库字段user_name会自动转换为Java属性userName
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+server:
+  port: 8080
